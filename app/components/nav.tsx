@@ -1,20 +1,20 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const navItems = {
-  '/': {
-    name: 'home',
+  "/": {
+    name: "Home",
   },
-  '/blog': {
-    name: 'blog',
+  "/blog": {
+    name: "Blog",
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
+  "mailto:pradityaaldi.s@gmail.com": {
+    name: "Contact",
   },
-}
+};
 
 export function Navbar() {
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
+    <aside className="-ml-[8px] mb-16 tracking-tight py-3">
       <div className="lg:sticky lg:top-20">
         <nav
           className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
@@ -30,11 +30,11 @@ export function Navbar() {
                 >
                   {name}
                 </Link>
-              )
+              );
             })}
           </div>
         </nav>
       </div>
     </aside>
-  )
+  );
 }
