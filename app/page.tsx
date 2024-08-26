@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-4 text-4xl font-black font-mono leading-normal">Hai, Saya Praditya Aldi</h1>
-      <p className="mb-4 leading-relaxed text-neutral-300">
+      <p className="mb-4 leading-relaxed dark:text-neutral-300 text-neutral-800">
         Hai, saya Praditya Aldi Syahputra, mahasiswa Teknik Komputer di Amikom Yogyakarta. Saya
         tertarik banget dengan web development dan cybersecurity, tapi masih terus belajar juga.
         Kalau kamu tertarik untuk kolaborasi atau sekadar diskusi sambil belajar bareng, yuk kita
