@@ -7,6 +7,9 @@ const navItems = {
   "/blog": {
     name: "Blog",
   },
+  "/portofolio": {
+    name: "Portofolio",
+  },
   "mailto:pradityaaldi.s@gmail.com": {
     name: "Contact",
   },
