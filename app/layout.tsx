@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { baseUrl } from "./sitemap";
+import TransitionProvider from "./transitionProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -51,11 +52,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="antialiased max-w-xl mx-4 lg:mx-auto ">
         <main className="flex-auto min-w-0 flex flex-col px-2 md:px-0 min-h-dvh">
-          <Navbar />
-          <div className="flex-1">{children}</div>
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
+          <TransitionProvider>
+            <Navbar />
+            <div className="flex-1">{children}</div>
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+          </TransitionProvider>
         </main>
       </body>
     </html>
