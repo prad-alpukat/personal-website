@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 interface LinkTestProps extends LinkProps {
   children: React.ReactNode;
   href: string;
+  className?: string;
 }
 
 function sleep(ms: number) {
@@ -24,11 +25,11 @@ export default function LinkTest({ children, href, ...props }: LinkTestProps) {
 
     setIsLoading(true);
     console.log("Loading...");
-    await sleep(1000);
+    await sleep(700);
 
     router.push(href);
 
-    await sleep(1000);
+    await sleep(700);
     setIsLoading(false);
   }
 
@@ -45,33 +46,33 @@ export function ExitTransition() {
   return (
     <>
       <motion.div
-        className={`bg-blue-200 fixed h-dvh top-0 right-0`}
+        className={`bg-neutral-700 fixed h-dvh top-0 right-0`}
         animate={{ width: ["0%", "100%"] }}
         transition={{
           width: {
             ease: "easeInOut",
-            duration: 1,
+            duration: 0.7,
           },
         }}
       ></motion.div>
       <motion.div
-        className={`bg-blue-400 fixed h-dvh top-0 right-0`}
+        className={`bg-neutral-800 fixed h-dvh top-0 right-0`}
         animate={{ width: ["0%", "100%"] }}
         transition={{
           width: {
             ease: "easeInOut",
-            duration: 1,
+            duration: 0.7,
             delay: 0.25,
           },
         }}
       ></motion.div>
       <motion.div
-        className={`bg-blue-600 fixed h-dvh top-0 right-0`}
+        className={`bg-neutral-950 fixed h-dvh top-0 right-0`}
         animate={{ width: ["0%", "100%"] }}
         transition={{
           width: {
             ease: "easeInOut",
-            duration: 1,
+            duration: 0.7,
             delay: 0.5,
           },
         }}
@@ -84,34 +85,34 @@ export function EnterTransition() {
   return (
     <>
       <motion.div
-        className={`bg-blue-200 fixed h-dvh top-0 left-0`}
+        className={`bg-neutral-700 fixed h-dvh top-0 left-0`}
         animate={{ width: ["100%", "0%"] }}
         transition={{
           width: {
             ease: "easeInOut",
-            duration: 1,
+            duration: 0.7,
             delay: 0.5,
           },
         }}
       ></motion.div>
       <motion.div
-        className={`bg-blue-400 fixed h-dvh top-0 left-0`}
+        className={`bg-neutral-800 fixed h-dvh top-0 left-0`}
         animate={{ width: ["100%", "0%"] }}
         transition={{
           width: {
             ease: "easeInOut",
-            duration: 1,
+            duration: 0.7,
             delay: 0.25,
           },
         }}
       ></motion.div>
       <motion.div
-        className={`bg-blue-600 fixed h-dvh top-0 left-0`}
+        className={`bg-neutral-950 fixed h-dvh top-0 left-0`}
         animate={{ width: ["100%", "0%"] }}
         transition={{
           width: {
             ease: "easeInOut",
-            duration: 1,
+            duration: 0.7,
           },
         }}
       ></motion.div>
