@@ -2,6 +2,8 @@ import DockMenus from "@/components/DockMenus";
 import Projects from "@/components/Projects";
 import ServicesHighlight from "@/components/ServicesHighlight";
 import GradualSpacing from "@/components/ui/gradual-spacing";
+import FlagIndo from "@/assets/flag-indonesia.png";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,16 +19,20 @@ export default function Home() {
 function HeroSection() {
   return (
     <section className="container max-w-screen-lg pt-10">
-      <div className="mb-8">
+      <div className="mb-4">
         <GradualSpacing
-          className="font-display text-center text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
+          className="font-display mb-0 text-center text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
           text="Praditya Aldi Syahputra"
           duration={0.75}
         />
         <ul className="list-disc pl-5 flex gap-8">
           <li>Web Developer</li>
           <li>Remote worker</li>
-          <li>Based in Yogyakarta</li>
+          <li>
+            <div className="flex gap-2">
+              Based in Yogyakarta <Image src={FlagIndo} alt="indo flag" height={24} />
+            </div>
+          </li>
         </ul>
       </div>
       <p>
