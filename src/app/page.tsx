@@ -1,4 +1,5 @@
 import DockMenus from "@/components/DockMenus";
+import Projects from "@/components/Projects";
 import ServicesHighlight from "@/components/ServicesHighlight";
 import GradualSpacing from "@/components/ui/gradual-spacing";
 
@@ -6,7 +7,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <PortofolioSection />
+      <Projects />
       <ServicesHighlight />
       <DockMenus className="fixed bottom-12 left-1/2 -translate-x-1/2" />
     </>
@@ -32,24 +33,6 @@ function HeroSection() {
         Lorem ipsum dolor sit amet consectetur. Placerat elit commodo sagittis risus proin gravida.
         Lacus egestas lobortis nunc id. Consectetur nulla sit eget volutpat.
       </p>
-    </section>
-  );
-}
-
-function PortofolioSection() {
-  return (
-    <section className="container max-w-screen-lg pt-10">
-      {/* title */}
-      <div className="flex justify-between">
-        <div>
-          <h3>Portofolio</h3>
-          <p>List Portoflio</p>
-        </div>
-        <button>download resume</button>
-      </div>
-
-      {/* portofolios */}
-      <div>portofolio</div>
     </section>
   );
 }
