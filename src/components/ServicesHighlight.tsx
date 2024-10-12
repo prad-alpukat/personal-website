@@ -9,16 +9,16 @@ export default function ServicesHighlight() {
       </div>
       <div className={"flex h-[500px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row"}>
         <MagicCard
-          className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl"
+          className="cursor-pointer flex-col items-center justify-center shadow-2xl text-4xl px-10 text-center"
           gradientColor={"#7e95fc44"}
         >
-          Magic
+          Website Development
         </MagicCard>
         <MagicCard
-          className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl"
+          className="cursor-pointer flex-col items-center justify-center shadow-2xl text-4xl px-10 text-center"
           gradientColor={"#7e95fc44"}
         >
-          Card
+          UI UX Design
         </MagicCard>
       </div>
     </section>
