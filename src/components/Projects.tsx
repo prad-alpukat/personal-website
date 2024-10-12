@@ -9,42 +9,42 @@ import Krasan from "@/assets/krasanvilla-banner.jpg";
 export default function Projects() {
   const projects = [
     {
+      title: "Neuversity",
+      description: "Mentor Frontend Development di Neuversity",
+      date: "Jun 2023 - Present",
+      image: Neuversity,
+      link: "https://neuversity.id",
+    },
+    {
+      title: "Bakoelkarcis",
+      description: "Frontend Developer untuk Website Bakoelkarcis",
+      date: "August 1, 2023",
+      image: Bakoelkarcis,
+      link: "https://bakoelkarcis.com",
+    },
+    {
+      title: "Krasanvilla",
+      description: "Web Developer untuk Website Krasanvilla",
+      date: "June 1, 2023",
+      image: Krasan,
+      link: "https://krasanvilla.com",
+    },
+    {
       title: "Gunasehat",
       description: "Frontend Web Developer untuk website Gunasehat.",
       date: "April 1, 2022",
       image: Gunasehat,
       link: "https://gunasehat.com",
     },
-    {
-      title: "Bakoelkarcis",
-      description: "Frontend Web Developer untuk website Gunasehat.",
-      date: "August 1, 2023",
-      image: Bakoelkarcis,
-      link: "https://bakoelkarcis.com",
-    },
-    {
-      title: "Neuversity",
-      description: "Frontend Web Developer untuk website Gunasehat.",
-      date: "Jun 2023 - Present",
-      image: Neuversity,
-      link: "https://neuversity.com",
-    },
-    {
-      title: "Krasanvilla",
-      description: "Frontend Web Developer untuk website Gunasehat.",
-      date: "June 1, 2023",
-      image: Krasan,
-      link: "https://krasanvilla.com",
-    },
   ];
 
   return (
-    <section className="container max-w-screen-lg pt-16">
+    <section className="container max-w-screen-lg pt-20">
       {/* title */}
       <div className="flex justify-between items-start mb-4">
         <div>
           <h3 className="text-3xl font-bold text-neutral-700 mb-1">Projects</h3>
-          <p className="text-sm">List Portoflio</p>
+          <p>Showcasing some my completed projects</p>
         </div>
         <Link
           href="https://drive.google.com/file/d/10jbjDLHBGFNiC1lTMkZ0aE6pBnGDiAtz/view?usp=sharings"
@@ -57,7 +57,7 @@ export default function Projects() {
       {/* portofolios */}
       <div className="grid grid-cols-4 gap-4">
         {projects.map((project, index) => (
-          <Link href="#" key={index} className="[&>div]:hover:scale-90 ">
+          <Link href={project.link} key={index} target="_blank" className="[&>div]:hover:scale-90 ">
             <CardProjects
               title={project.title}
               description={project.description}
