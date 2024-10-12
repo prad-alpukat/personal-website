@@ -55,7 +55,7 @@ export default function Projects() {
       </BlurFade>
 
       {/* portofolios */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
         {projects.map((project, index) => (
           <Link href={project.link} key={index} target="_blank" className="[&>div]:hover:scale-90 ">
             <CardProjects

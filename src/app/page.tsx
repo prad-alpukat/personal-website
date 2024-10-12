@@ -34,7 +34,7 @@ export default function Home() {
 function HeroSection() {
   return (
     <section className="container max-w-screen-lg pt-10">
-      <div className="flex gap-4">
+      <div className="flex md:gap-4 md:items-center md:flex-row flex-col mb-6">
         <Link href="/" className="hover:[&_img]:scale-90">
           <BlurFade>
             <Image
@@ -46,23 +46,23 @@ function HeroSection() {
             />
           </BlurFade>
         </Link>
-        <div className="mb-6">
+        <div>
           <GradualSpacing
-            className="font-display -mb-2 text-center text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
+            className="font-display mb-2 lg:mb-4 text-center text-xl sm:text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-3xl lg:text-5xl"
             text="Praditya Aldi Syahputra"
             duration={0.75}
           />
-          <ul className="list-disc pl-5 flex gap-8">
+          <ul className="list-disc pl-5 flex flex-wrap">
             <BlurFade>
-              <li>Web Developer</li>
+              <li className="mr-8 mb-1 text-sm md:text-base">Web Developer</li>
             </BlurFade>
 
             <BlurFade delay={0.25}>
-              <li>Remote worker</li>
+              <li className="mr-8 mb-1 text-sm md:text-base">Remote worker</li>
             </BlurFade>
 
             <BlurFade delay={0.5}>
-              <li>
+              <li className="mr-8 mb-1 text-sm md:text-base">
                 <div className="flex gap-2">
                   Based in Yogyakarta <Image src={FlagIndo} alt="indo flag" height={24} />
                 </div>

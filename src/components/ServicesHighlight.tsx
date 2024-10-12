@@ -17,7 +17,7 @@ export default function ServicesHighlight() {
         <h2 className="text-3xl font-bold text-neutral-700">Services</h2>
         <p>These services are what I can provide</p>
       </div>
-      <div className={"flex h-[500px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row"}>
+      <div className={"flex h-[500px] w-full flex-col gap-4 md:h-[250px] md:flex-row"}>
         <MagicCard
           className="flex-col items-center justify-center text-xl px-10 text-center gap-3"
           gradientColor={"#7e95fc55"}
