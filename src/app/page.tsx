@@ -31,9 +31,9 @@ export default function Home() {
 function HeroSection() {
   return (
     <section className="container max-w-screen-lg pt-10">
-      <div className="mb-4">
+      <div className="mb-6">
         <GradualSpacing
-          className="font-display mb-0 text-center text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
+          className="font-display -mb-3 text-center text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
           text="Praditya Aldi Syahputra"
           duration={0.75}
         />
@@ -47,10 +47,21 @@ function HeroSection() {
           </li>
         </ul>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur. Placerat elit commodo sagittis risus proin gravida.
-        Lacus egestas lobortis nunc id. Consectetur nulla sit eget volutpat.
-      </p>
+      <div className="space-y-4">
+        <p>
+          Hi! I’m a frontend developer who loves building clean, responsive, and user-friendly web
+          interfaces. I enjoy working with technologies like JavaScript, React, and CSS to create
+          seamless experiences that make users happy.
+        </p>
+
+        <p>
+          While my main focus is on frontend, I also have experience in backend development, which
+          helps me understand the full picture of a web project. I’m always eager to learn new
+          things, explore the latest trends in design, and work on projects that challenge me to
+          grow.
+        </p>
+        <p>Let’s connect and chat about web development, design, or potential collaboration!</p>
+      </div>
     </section>
   );
 }
