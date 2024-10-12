@@ -1,4 +1,5 @@
 import DockMenus from "@/components/DockMenus";
+import ServicesHighlight from "@/components/ServicesHighlight";
 import GradualSpacing from "@/components/ui/gradual-spacing";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <HeroSection />
       <PortofolioSection />
+      <ServicesHighlight />
       <DockMenus className="fixed bottom-12 left-1/2 -translate-x-1/2" />
     </>
   );
