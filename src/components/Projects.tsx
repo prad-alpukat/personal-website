@@ -41,7 +41,7 @@ export default function Projects() {
   return (
     <section className="container max-w-screen-lg pt-20">
       {/* title */}
-      <div className="flex justify-between items-start mb-4">
+      <BlurFade delay={1} className="flex justify-between items-start mb-4">
         <div>
           <h3 className="text-3xl font-bold text-neutral-700 mb-1">Projects</h3>
           <p>Showcasing some my completed projects</p>
@@ -52,7 +52,7 @@ export default function Projects() {
         >
           <ShinyButton>Resume</ShinyButton>
         </Link>
-      </div>
+      </BlurFade>
 
       {/* portofolios */}
       <div className="grid grid-cols-4 gap-4">
@@ -63,6 +63,7 @@ export default function Projects() {
               description={project.description}
               date={project.date}
               image={project.image}
+              delay={index * 0.25 + 1}
             />
           </Link>
         ))}
@@ -72,31 +73,35 @@ export default function Projects() {
 }
 
 import Image, { StaticImageData } from "next/image";
+import BlurFade from "./ui/blur-fade";
 
 interface ProjectsProps {
   title: string;
   description: string;
   date: string;
   image: StaticImageData;
+  delay: number;
 }
 
-function CardProjects({ title, description, date, image }: ProjectsProps) {
+function CardProjects({ title, description, date, image, delay }: ProjectsProps) {
   return (
-    <div className="w-full transition-all">
-      <div className="relative mb-3">
-        <Image
-          className="aspect-video object-cover rounded-lg border"
-          src={image}
-          alt="random image"
-        />
-        <h4 className="font-bold tracking-wide text-sm absolute bottom-3 left-3 bg-white/40 py-0.5 px-3 rounded-full backdrop-blur line-clamp-1">
-          {title}
-        </h4>
-      </div>
-      <div>
-        <p className="text-sm mb-2 line-clamp-2">{description}</p>
-        <p className="text-gray-500 text-xs font-bold">{date}</p>
-      </div>
+    <div className="transition-all">
+      <BlurFade className="w-full " delay={delay}>
+        <div className="relative mb-3">
+          <Image
+            className="aspect-video object-cover rounded-lg border"
+            src={image}
+            alt="random image"
+          />
+          <h4 className="font-bold tracking-wide text-sm absolute bottom-3 left-3 bg-white/40 py-0.5 px-3 rounded-full backdrop-blur line-clamp-1">
+            {title}
+          </h4>
+        </div>
+        <div>
+          <p className="text-sm mb-2 line-clamp-2">{description}</p>
+          <p className="text-gray-500 text-xs font-bold">{date}</p>
+        </div>
+      </BlurFade>
     </div>
   );
 }

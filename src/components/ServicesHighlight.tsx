@@ -1,10 +1,18 @@
+"use client";
+
 import { MagicCard } from "@/components/ui/magic-card";
 import IllustrationIcons from "./icons/IllustrationsIcon";
 import DesignerIcon from "./icons/DesignerIcon";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function ServicesHighlight() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <section className="container max-w-screen-lg pt-20">
+    <section className="container max-w-screen-lg pt-20" data-aos="fade-up">
       <div className="mb-6">
         <h2 className="text-3xl font-bold text-neutral-700">Services</h2>
         <p>These services are what I can provide</p>
