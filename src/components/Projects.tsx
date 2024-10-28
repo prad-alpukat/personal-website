@@ -47,7 +47,7 @@ export default function Projects() {
           <p>Showcasing some my completed projects</p>
         </div>
         <Link
-          href="https://drive.google.com/file/d/10jbjDLHBGFNiC1lTMkZ0aE6pBnGDiAtz/view?usp=sharings"
+          href="https://drive.google.com/file/d/1l97WXQGQg5YzaCqqWj5RTWkUYY2m6eIb/view?usp=sharing"
           target="_blank"
         >
           <ShinyButton>Resume</ShinyButton>
