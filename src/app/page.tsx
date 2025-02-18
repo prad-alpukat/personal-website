@@ -1,3 +1,5 @@
+"use client"
+
 import DockMenus from "@/components/DockMenus";
 import Projects from "@/components/Projects";
 import ServicesHighlight from "@/components/ServicesHighlight";
@@ -9,10 +11,12 @@ import { cn } from "@/lib/utils";
 import BlurFade from "@/components/ui/blur-fade";
 import Avatar from "@/assets/avatar.jpeg";
 import Link from "next/link";
+import Lanyard from "@/components/Lanyard/Lanyard";
 
 export default function Home() {
   return (
     <>
+      <Lanyard className="fixed translate-x-1/4 left-28"/>
       <HeroSection />
       <Projects />
       <ServicesHighlight />
