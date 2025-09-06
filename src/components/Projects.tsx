@@ -11,7 +11,7 @@ export default function Projects() {
       <BlurFade delay={1} className="flex justify-between items-start mb-4">
         <div>
           <h3 className="text-3xl font-bold text-neutral-700 mb-1">Projects</h3>
-          <p>Showcasing some my completed projects</p>
+            <p>Here are the projects I can showcase</p>
         </div>
         <Link
           href="https://drive.google.com/file/d/1l97WXQGQg5YzaCqqWj5RTWkUYY2m6eIb/view?usp=sharing"
