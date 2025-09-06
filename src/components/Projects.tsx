@@ -2,6 +2,7 @@ import ShinyButton from "@/components/ui/shiny-button";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import BlurFade from "@/components/ui/blur-fade";
+import CardProjects from "@/components/CardProjects";
 
 export default function Projects() {
 
@@ -52,39 +53,5 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  );
-}
-
-import Image from "next/image";
-import { Project } from "@/data/projects";
-
-interface ProjectsProps extends Project {
-  delay: number;
-}
-
-function CardProjects({ title, description, date, image, delay, link }: ProjectsProps) {
-  const isDisabled = !link;
-  
-  return (
-    <div className="transition-all">
-      <BlurFade className="w-full " delay={delay}>
-        <div className="relative mb-3">
-          <Image
-            className={`aspect-video object-cover rounded-lg border ${isDisabled ? 'grayscale' : ''}`}
-            src={image}
-            alt="random image"
-          />
-          <h4 className={`font-bold tracking-wide text-sm absolute bottom-3 left-3 py-0.5 px-3 rounded-full backdrop-blur line-clamp-1`}>
-            {title}
-          </h4>
-        </div>
-        <div>
-          <p className={`text-sm mb-2 line-clamp-2`}>
-            {description}
-          </p>
-          <p className="text-gray-500 text-xs font-bold">{date}</p>
-        </div>
-      </BlurFade>
-    </div>
   );
 }
