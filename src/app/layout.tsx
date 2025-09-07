@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import dynamic from "next/dynamic";
-
-// Dynamically import the CSS loader component
-const DynamicCSSLoader = dynamic(() => import('./CSSLoader'), {
-  ssr: true, // Enable SSR for CSS loading
-  loading: () => null, // No loading component needed
-});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -63,7 +57,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased pb-36`}
       >
-        <DynamicCSSLoader />
         {children}
       </body>
     </html>
