@@ -6,9 +6,6 @@ import GradualSpacing from "@/components/ui/gradual-spacing";
 import BlurFade from "@/components/ui/blur-fade";
 import FlagIndo from "@/assets/flag-indonesia.png";
 import Avatar from "@/assets/avatar.jpeg";
-import RippleGrid from "./RippleGrid";
-import Galaxy from "./Galaxy";
-import Beams from "./Beams";
 
 export default function HeroSection() {
   return (
