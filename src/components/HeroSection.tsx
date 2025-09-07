@@ -18,6 +18,8 @@ export default function HeroSection() {
               alt="Praditya Aldi Syahputra profile picture"
               width={100}
               height={100}
+              fetchPriority="high"
+              placeholder="blur"
               className="rounded-full border border-neutral-200 dark:border-neutral-700 p-1 transition-all"
             />
           </BlurFade>
