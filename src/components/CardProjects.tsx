@@ -28,7 +28,7 @@ export default function CardProjects({
               fill
               placeholder="blur"
               quality={75}
-              sizes="(max-width: 320px) 280px, (max-width: 640px) 320px, (max-width: 768px) 350px, (max-width: 1024px) 320px, 326px"
+              sizes="(max-width: 320px) 150px, (max-width: 640px) 200px, (max-width: 768px) 250px, (max-width: 1024px) 200px, 250px"
               style={{
                 objectFit: "cover",
               }}
