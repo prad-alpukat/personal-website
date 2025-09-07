@@ -28,7 +28,6 @@ export default function CardProjects({
               placeholder="blur"
               quality={35}
               width={400}
-              loading="lazy"
               fetchPriority="high"
               priority={true}
             />
