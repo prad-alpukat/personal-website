@@ -25,11 +25,15 @@ export default function CardProjects({
               className={`object-cover ${isDisabled ? "grayscale" : ""}`}
               src={image}
               alt={`${title} project`}
+              fill
               placeholder="blur"
-              quality={35}
-              width={400}
+              quality={75}
+              sizes="(max-width: 320px) 280px, (max-width: 640px) 320px, (max-width: 768px) 350px, (max-width: 1024px) 320px, 326px"
+              style={{
+                objectFit: "cover",
+              }}
               fetchPriority="high"
-              priority={true}
+              loading="lazy"
             />
           </div>
           <p className="font-bold tracking-wide text-sm absolute bottom-3 left-3 py-0.5 px-3 rounded-full backdrop-blur line-clamp-1 bg-white/40 dark:bg-black/40 dark:text-white">

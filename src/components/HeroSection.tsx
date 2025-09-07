@@ -23,11 +23,9 @@ export default function HeroSection() {
           </BlurFade>
         </Link>
         <div>
-          <GradualSpacing
-            className="font-display mb-2 lg:mb-4 text-center text-xl sm:text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-3xl lg:text-5xl"
-            text="Praditya Aldi Syahputra"
-            duration={0.75}
-          />
+          <h1 className="font-display mb-2 lg:mb-4 text-center text-xl sm:text-3xl font-bold -tracking-widest text-black dark:text-white md:text-3xl lg:text-5xl">
+            <GradualSpacing text="Praditya Aldi Syahputra" duration={0.75} />
+          </h1>
           <ul className="list-disc pl-5 flex flex-wrap text-neutral-700 dark:text-neutral-300">
             <BlurFade>
               <li className="mr-8 mb-1 text-sm md:text-base">Web Developer</li>

@@ -84,7 +84,7 @@ export default function ServicesHighlight() {
     };
   }, []);
   return (
-    <motion.section 
+    <motion.section
       className="container max-w-screen-lg pt-20"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -116,26 +116,26 @@ export default function ServicesHighlight() {
             className="flex-col items-center flex relative justify-center text-xl px-10 text-center gap-3 text-neutral-700 overflow-hidden h-full"
             gradientColor={"#ffffff25"}
           >
-          <div ref={cardRef} className="relative w-36 mx-auto">
-            <div
-              className={`absolute h-1/2 aspect-square bg-white rounded-full overflow-hidden transition-all duration-300 ease-out z-10`}
-              style={{
-                left: `${mousePosition.x}px`,
-                top: `${mousePosition.y}px`,
-              }}
-            >
-              <IllustrationIcons
-                className="mx-auto w-36 z-10 text-neutral-800 absolute transition-all duration-300"
+            <div ref={cardRef} className="relative w-36 mx-auto">
+              <div
+                className={`absolute h-1/2 aspect-square bg-white rounded-full overflow-hidden transition-all duration-300 ease-out z-10`}
                 style={{
-                  left: `${-mousePosition.x}px`,
-                  top: `${-mousePosition.y}px`,
+                  left: `${mousePosition.x}px`,
+                  top: `${mousePosition.y}px`,
                 }}
-              />
+              >
+                <IllustrationIcons
+                  className="mx-auto w-36 z-10 text-neutral-800 absolute transition-all duration-300"
+                  style={{
+                    left: `${-mousePosition.x}px`,
+                    top: `${-mousePosition.y}px`,
+                  }}
+                />
+              </div>
+              <IllustrationIcons className="w-full opacity-50" />
             </div>
-            <IllustrationIcons className="w-full opacity-50" />
-          </div>
-          <p className="text-white">Website Development</p>
-        </MagicCard>
+            <p className="text-white">Website Development</p>
+          </MagicCard>
         </motion.div>
 
         <motion.div
@@ -148,26 +148,26 @@ export default function ServicesHighlight() {
             className="relative flex-col items-center justify-center text-xl px-10 text-center gap-3 text-neutral-700 dark:text-neutral-500 overflow-hidden h-full"
             gradientColor={"#ffffff25"}
           >
-          <div ref={cardRef2} className="relative w-36 mx-auto">
-            <div
-              className={`absolute h-1/2 aspect-square bg-white rounded-full overflow-hidden z-20 transition-all duration-300 ease-out`}
-              style={{
-                left: `${mousePosition2.x}px`,
-                top: `${mousePosition2.y}px`,
-              }}
-            >
-              <DesignerIcon
-                className="mx-auto w-36 z-10 text-neutral-800 absolute transition-all duration-300"
+            <div ref={cardRef2} className="relative w-36 mx-auto">
+              <div
+                className={`absolute h-1/2 aspect-square bg-white rounded-full overflow-hidden z-20 transition-all duration-300 ease-out`}
                 style={{
-                  left: `${-mousePosition2.x}px`,
-                  top: `${-mousePosition2.y}px`,
+                  left: `${mousePosition2.x}px`,
+                  top: `${mousePosition2.y}px`,
                 }}
-              />
+              >
+                <DesignerIcon
+                  className="mx-auto w-36 z-10 text-neutral-800 absolute transition-all duration-300"
+                  style={{
+                    left: `${-mousePosition2.x}px`,
+                    top: `${-mousePosition2.y}px`,
+                  }}
+                />
+              </div>
+              <DesignerIcon className="w-full opacity-50" />
             </div>
-            <DesignerIcon className="w-full opacity-50" />
-          </div>
-          <p className="text-white">UI UX Design</p>
-        </MagicCard>
+            <p className="text-white">UI UX Design</p>
+          </MagicCard>
         </motion.div>
       </motion.div>
     </motion.section>

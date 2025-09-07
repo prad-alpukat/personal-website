@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import dynamic from "next/dynamic";
+
+// Dynamically import the CSS loader component
+const DynamicCSSLoader = dynamic(() => import('./CSSLoader'), {
+  ssr: true, // Enable SSR for CSS loading
+  loading: () => null, // No loading component needed
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -12,6 +18,29 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const montserrat = localFont({
+  src: [
+    {
+      path: "../assets/fonts/Montserrat/static/Montserrat-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Montserrat/static/Montserrat-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-montserrat",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -32,8 +61,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <Analytics />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased pb-36`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased pb-36`}
       >
+        <DynamicCSSLoader />
         {children}
       </body>
     </html>
