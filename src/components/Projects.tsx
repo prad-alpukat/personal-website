@@ -10,9 +10,9 @@ export default function Projects() {
       {/* title */}
       <BlurFade delay={1} className="flex justify-between items-start mb-4">
         <div>
-          <h3 className="text-3xl font-bold text-neutral-700 dark:text-neutral-200 mb-1">
+          <h2 className="text-3xl font-bold text-neutral-700 dark:text-neutral-200 mb-1">
             Projects
-          </h3>
+          </h2>
           <p className="text-neutral-600 dark:text-neutral-400">
             Here are the projects I can showcase
           </p>

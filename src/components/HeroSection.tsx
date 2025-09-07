@@ -49,16 +49,16 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="space-y-4 text-neutral-600 dark:text-neutral-400">
-        <BlurFade delay={1}>
+        <BlurFade delay={0}>
           <p>
-            Hi! I&apos;m a frontend developer who loves building clean, responsive,
-            and user-friendly web interfaces. I enjoy working with technologies
-            like JavaScript, React, and CSS to create seamless experiences that
-            make users happy.
+            Hi! I&apos;m a frontend developer who loves building clean,
+            responsive, and user-friendly web interfaces. I enjoy working with
+            technologies like JavaScript, React, and CSS to create seamless
+            experiences that make users happy.
           </p>
         </BlurFade>
 
-        <BlurFade delay={1.25}>
+        <BlurFade delay={0.25}>
           <p>
             While my main focus is on frontend, I also have experience in
             backend development, which helps me understand the full picture of a
@@ -68,10 +68,10 @@ export default function HeroSection() {
           </p>
         </BlurFade>
 
-        <BlurFade delay={1.5}>
+        <BlurFade delay={0.5}>
           <p>
-            Let&apos;s connect and chat about web development, design, or potential
-            collaboration!
+            Let&apos;s connect and chat about web development, design, or
+            potential collaboration!
           </p>
         </BlurFade>
       </div>

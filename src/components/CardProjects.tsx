@@ -20,16 +20,22 @@ export default function CardProjects({
     <div className="transition-all">
       <BlurFade className="w-full" delay={delay}>
         <div className="relative mb-3">
-          <Image
-            className={`aspect-video object-cover rounded-lg border border-neutral-200 dark:border-neutral-700 ${
-              isDisabled ? "grayscale" : ""
-            }`}
-            src={image}
-            alt={`${title} project image`}
-          />
-          <h4 className="font-bold tracking-wide text-sm absolute bottom-3 left-3 py-0.5 px-3 rounded-full backdrop-blur line-clamp-1 bg-white/40 dark:bg-black/40 dark:text-white">
+          <div className="aspect-video w-full relative overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700">
+            <Image
+              className={`object-cover ${isDisabled ? "grayscale" : ""}`}
+              src={image}
+              alt={`${title} project`}
+              placeholder="blur"
+              quality={35}
+              width={400}
+              loading="lazy"
+              fetchPriority="high"
+              priority={true}
+            />
+          </div>
+          <p className="font-bold tracking-wide text-sm absolute bottom-3 left-3 py-0.5 px-3 rounded-full backdrop-blur line-clamp-1 bg-white/40 dark:bg-black/40 dark:text-white">
             {title}
-          </h4>
+          </p>
         </div>
         <div>
           <p
