@@ -51,7 +51,7 @@ export default function HeroSection() {
       <div className="space-y-4 text-neutral-600 dark:text-neutral-400">
         <BlurFade delay={1}>
           <p>
-            Hi! I'm a frontend developer who loves building clean, responsive,
+            Hi! I&apos;m a frontend developer who loves building clean, responsive,
             and user-friendly web interfaces. I enjoy working with technologies
             like JavaScript, React, and CSS to create seamless experiences that
             make users happy.
@@ -62,7 +62,7 @@ export default function HeroSection() {
           <p>
             While my main focus is on frontend, I also have experience in
             backend development, which helps me understand the full picture of a
-            web project. I'm always eager to learn new things, explore the
+            web project. I&apos;m always eager to learn new things, explore the
             latest trends in design, and work on projects that challenge me to
             grow.
           </p>
@@ -70,7 +70,7 @@ export default function HeroSection() {
 
         <BlurFade delay={1.5}>
           <p>
-            Let's connect and chat about web development, design, or potential
+            Let&apos;s connect and chat about web development, design, or potential
             collaboration!
           </p>
         </BlurFade>
