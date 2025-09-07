@@ -5,14 +5,17 @@ import BlurFade from "@/components/ui/blur-fade";
 import CardProjects from "@/components/CardProjects";
 
 export default function Projects() {
-
   return (
     <section className="container max-w-screen-lg pt-20">
       {/* title */}
       <BlurFade delay={1} className="flex justify-between items-start mb-4">
         <div>
-          <h3 className="text-3xl font-bold text-neutral-700 mb-1">Projects</h3>
-            <p>Here are the projects I can showcase</p>
+          <h3 className="text-3xl font-bold text-neutral-700 dark:text-neutral-200 mb-1">
+            Projects
+          </h3>
+          <p className="text-neutral-600 dark:text-neutral-400">
+            Here are the projects I can showcase
+          </p>
         </div>
         <Link
           href="https://drive.google.com/file/d/1l97WXQGQg5YzaCqqWj5RTWkUYY2m6eIb/view?usp=sharing"
@@ -27,7 +30,11 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div key={index}>
             {project.link ? (
-              <Link href={project.link} target="_blank" className="[&>div]:hover:scale-90">
+              <Link
+                href={project.link}
+                target="_blank"
+                className="[&>div]:hover:scale-90"
+              >
                 <CardProjects
                   title={project.title}
                   description={project.description}
